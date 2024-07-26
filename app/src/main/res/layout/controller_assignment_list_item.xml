@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="32dp"
+    android:paddingVertical="8dp"
+    android:layout_marginVertical="8dp">
+
+    <TextView
+        android:id="@+id/controllerButtonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Xbox A Button:"
+        android:textSize="16sp"
+        android:fontFamily="@font/oswald_medium"
+        android:textColor="@color/primary"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+        android:id="@+id/controllerButtonValue"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stroke_rounded_rect"
+        android:backgroundTint="@color/primary"
+        android:completionThreshold="0"
+        android:fontFamily="@font/oswald_medium"
+        android:hint="Ex: jump"
+        android:imeOptions="flagNoExtractUi|actionDone"
+        android:inputType="textAutoComplete"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="4dp"
+        android:textColor="@color/black"
+        android:textColorHint="#44000000"
+        android:textSize="16sp" />
+
+</LinearLayout>

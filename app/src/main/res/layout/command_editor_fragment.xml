@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="64dp">
+
+        <com.gingertech.starbeam.helpers.controllers.mScroll
+            android:id="@+id/commandListScroll"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:background="@drawable/stroke_rounded_rect_white"
+            android:backgroundTint="#882c2c2c"
+            android:padding="4dp">
+
+            <LinearLayout
+                android:id="@+id/commands"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+
+        </com.gingertech.starbeam.helpers.controllers.mScroll>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+            <com.gingertech.starbeam.helpers.controllers.TextWithImage
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:iconText="Delete Command"
+                app:iconTint="@color/red"
+                app:iconImg="@drawable/trash_icon"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="16dp"
+                android:alpha="0.3"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <com.gingertech.starbeam.helpers.controllers.mScroll
+        android:id="@+id/codeScroll"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:layout_marginTop="64dp"
+        >
+
+        <com.gingertech.starbeam.helpers.controllers.CodeEditorController
+            android:id="@+id/codeEditor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.gingertech.starbeam.helpers.controllers.mScroll>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="64dp"
+             android:orientation="horizontal"
+             android:gravity="center">
+
+             <View
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"/>
+
+             <com.gingertech.starbeam.helpers.controllers.TextWithImage
+                 android:id="@+id/saveButton"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:layout_gravity="center"
+                 android:gravity="center"
+                 app:iconText="Save"
+                 app:iconImg="@drawable/folder_icon"
+                 android:layout_marginRight="8dp"/>
+
+
+             <ImageView
+                 android:id="@+id/backButton"
+                 android:layout_width="24dp"
+                 android:layout_height="24dp"
+                 android:src="@drawable/cancel_icon"
+                 app:tint="@color/red"
+                 android:layout_marginRight="16dp"
+                 />
+
+         </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/stroke_rounded_rect_white"
+        android:padding="16dp"
+        android:layout_marginBottom="64dp">
+
+    <LinearLayout
+        android:id="@+id/infoSegment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/valuesTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Keybinds"
+            android:fontFamily="@font/oswald_medium"
+            android:textColor="@color/black"
+            android:paddingTop="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/keybinds"
+            android:orientation="vertical">
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_rounded_rect"
+                android:hint="eg: space"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:fontFamily="@font/oswald_regular"
+                android:textSize="12sp"
+                android:imeOptions="actionDone"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/parameterTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Time"
+            android:fontFamily="@font/oswald_medium"
+            android:textColor="@color/black"
+            android:paddingTop="8dp"/>
+
+
+            <EditText
+                android:id="@+id/parameter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stroke_rounded_rect"
+                android:hint="eg: 67"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="4dp"
+                android:fontFamily="@font/oswald_regular"
+                android:inputType="number"
+                android:textSize="12sp"
+                android:imeOptions="actionDone"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Command Description"
+            android:fontFamily="@font/oswald_medium"
+            android:textColor="@color/black"
+            android:paddingTop="8dp"/>
+
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This is the click command that presses a button for a particular period of time."
+            android:textColor="@color/grey"
+            android:fontFamily="@font/dm_mono"
+            android:paddingHorizontal="8dp"/>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+     </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/blockoutText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/stroke_rounded_rect_white"
+            android:text="Select a Command\non the left"
+            android:textColor="@color/black"
+            android:paddingHorizontal="8dp"
+            android:fontFamily="@font/oswald_medium"
+            android:gravity="center"
+            android:layout_marginVertical="64dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:fontFamily="@font/oswald_medium"
+            android:gravity="center"
+            android:text="Command Name:"
+            android:textColor="@color/primary"
+            android:alpha="0.4"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/CommandName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:fontFamily="@font/oswald_medium"
+            android:gravity="center"
+            android:text="JUMP_AND_FLY"
+            android:textColor="@color/primary"
+            android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/nameEdit"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/pencil_icon"
+            app:tint="@color/primary"/>
+
+    </LinearLayout>
+
+
+    <include
+        android:id="@+id/commandNameEdit"
+        android:visibility="gone"
+        layout="@layout/edit_command_popup"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

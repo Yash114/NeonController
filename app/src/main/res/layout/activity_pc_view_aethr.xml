@@ -1,0 +1,203 @@
+<!-- Portrait orientation only -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/pcFragmentContainerNEON"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="36dp"
+
+        android:layout_marginHorizontal="16dp"
+        >
+
+        <com.gingertech.starbeam.helpers.controllers.VideoTutorialLayout
+            android:id="@+id/tutorial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="64dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/pcs_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/primary"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/pcs_loading"
+            android:layout_toEndOf="@+id/pcs_loading"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:gravity="center"
+            android:textColor="@color/primary"
+            android:fontFamily="@font/oswald_medium"
+            android:text="@string/finding_local_computers_available_for_remote_play"/>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/no_pc_found_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/error_icon"
+            app:tint="@color/red"
+            android:layout_gravity="center"/>
+
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/primary"
+            android:fontFamily="@font/oswald_medium"
+            android:text="Connection Error"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/primaryDarker"
+            android:fontFamily="@font/dm_mono"
+            android:text="Download the host on your computer\nfrom neoncontroller.com to play"/>
+
+
+        <com.gingertech.starbeam.helpers.controllers.TextWithImage
+            android:id="@+id/viewTutorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconText="Watch Setup"
+            app:iconImg="@drawable/play_icon"
+            android:layout_marginTop="32dp"
+            app:iconTint="@color/primary"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="@drawable/border_red"
+            android:visibility="gone"/>
+
+        <com.gingertech.starbeam.helpers.controllers.TextWithImage
+            android:visibility="gone"
+            android:id="@+id/restartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconText="Search Again"
+            app:iconImg="@drawable/refresh"
+            app:iconTint="@color/primary"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+
+            tools:ignore="DuplicateIds" />
+
+    </LinearLayout>
+
+
+    <com.gingertech.starbeam.helpers.controllers.TutorialViewController
+        android:id="@+id/tutorialView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:paddingHorizontal="72dp"
+        android:paddingBottom="16dp"
+        android:visibility="gone" />
+
+    <com.gingertech.starbeam.helpers.controllers.TextWithImage
+        android:id="@+id/restartButton2"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+
+        android:layout_marginBottom="8dp"
+        app:iconImg="@drawable/refresh"
+        app:iconText="Reload"
+        app:iconTint="@color/secondary"
+        android:visibility="gone"/>
+
+    <com.gingertech.starbeam.helpers.controllers.TextWithImage
+        android:id="@+id/manualIP"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:iconText="Join Via IP"
+        app:iconImg="@drawable/connect"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/restartButton2"
+        android:layout_marginVertical="8dp"
+        android:visibility="visible"
+        android:layout_marginStart="8dp"
+        />
+
+    <com.gingertech.starbeam.helpers.controllers.TextWithImage
+        android:id="@+id/noPC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:iconText="No PC?"
+        app:iconImg="@drawable/no_pc_icon"
+        android:layout_alignParentBottom="true"
+        app:iconTint="@color/secondary"
+        android:layout_toRightOf="@id/manualIP"
+        android:layout_marginVertical="8dp"
+        android:visibility="visible"
+        />
+
+    <include
+        android:visibility="gone"
+        android:id="@+id/arcadeEmailPopup"
+        layout="@layout/share_with_friends_popup"/>
+
+
+</RelativeLayout>

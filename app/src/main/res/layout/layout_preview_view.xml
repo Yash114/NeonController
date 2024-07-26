@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="164dp"
+    android:layout_height="170dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent"
+        android:layout_width="144dp"
+        android:layout_height="156dp"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/basic_bordered_background">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:translationY="-8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_medium"
+                android:text="*Selected Controller*"
+                android:textColor="@color/black"
+                android:textSize="6dp"
+                android:lines="1"
+                android:ellipsize="end"
+                android:lineSpacingMultiplier="0.7"
+                 android:layout_marginTop="2dp"/>
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_medium"
+                android:text="Title Text gj ggu uh"
+                android:textColor="@color/primary"
+                android:textSize="24dp"
+                android:lines="1"
+                android:ellipsize="end"
+                android:lineSpacingMultiplier="0.7"
+                android:layout_marginTop="-8dp"/>
+
+            <TextView
+                android:id="@+id/descriptionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_mono"
+                android:maxLines="5"
+                android:ellipsize="end"
+                android:text="Description Text\nhi broskiththis dho\nsfbdksbfds"
+                android:textColor="@color/primary"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lockedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#33000000"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/lockedImage"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:rotation="-35"
+                android:src="@drawable/lock_icon"
+                android:tint="@color/primary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/downloaded"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/cloud_down_icon"
+            android:tint="@color/purple"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="8dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/editor_layout"
+        android:layout_marginBottom="8dp"
+        android:gravity="top"
+        android:alpha="0">
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:id="@+id/delete_layout_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/trash_icon"
+            android:tint="@color/black"
+            android:padding="4dp"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/primary"
+            android:backgroundTintMode="src_atop"
+            android:visibility="visible"
+            android:elevation="8dp"
+            android:paddingBottom="8dp"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/edit_layout_button"
+            android:padding="4dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:paddingBottom="8dp"
+            android:src="@drawable/pencil_icon"
+            android:tint="@color/black"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/primary"
+            android:backgroundTintMode="src_atop"
+            android:visibility="visible"
+            app:layout_constraintRight_toRightOf="parent"
+            android:elevation="8dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/addToGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/circle"
+        android:src="@drawable/folder_icon"
+        android:padding="6dp"
+        android:elevation="8dp"/>
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/baseline_add_24"
+        android:padding="12dp"
+        app:tint="@color/black"
+        android:elevation="8dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/removeFromGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/circle"
+            android:src="@drawable/folder_icon"
+            android:padding="6dp"
+            android:elevation="8dp"/>
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/remove_fill0_wght400_grad0_opsz24"
+            android:padding="12dp"
+            app:tint="@color/red"
+            android:elevation="8dp"/>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

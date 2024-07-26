@@ -1,0 +1,57 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/cloud_sticky</item>
+        <item name="colorPrimaryDark">@color/cloud_scroll</item>
+        <item name="colorAccent">@color/cloud_joy</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@android:style/TextAppearance">
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.App" parent="@style/Theme.MaterialComponents.DayNight">
+        <item name="colorSecondary">#bbbbbb</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <color name="color_toggle">#FFFFFF</color>
+    <color name="color_toggle_background">#FFFFFF</color>
+
+    <color name="color_back">#66FFFFFF</color>
+    <color name="color_overlay_back">#FF0000</color>
+
+    <color name="color_main_buttons">#FF777777</color>
+    <color name="color_main_buttons_clicked">#FFFF0000</color>
+
+    <color name="color_overlay_buttons_clicked">#FFFF0000</color>
+    <color name="color_overlay_buttons">#FF777777</color>
+
+    <color name="color_main_text">#ffffff</color>
+    <color name="color_main_text_dark">#000000</color>
+
+    <color name="color_overlay_text">#F0555555</color>
+
+    <integer name="reorientation_time">450</integer>
+
+    <dimen name="title_size">64dp</dimen>
+    <dimen name="border_radius">16dp</dimen>
+    <dimen name="super_border_radius">16dp</dimen>
+
+    <dimen name="length">100</dimen>
+
+    <style name="PreferenceScreenTextStyle" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">@font/dm_mono</item>
+    </style>
+
+
+</resources>

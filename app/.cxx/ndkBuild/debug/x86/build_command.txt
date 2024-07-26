@@ -1,0 +1,18 @@
+Executable : /Users/yashua_evans/Library/Android/sdk/ndk/24.0.8215888/ndk-build
+arguments : 
+NDK_PROJECT_PATH=null
+APP_BUILD_SCRIPT=/Users/yashua_evans/Desktop/Projects/Athir/Application/app/src/main/jni/Android.mk
+NDK_APPLICATION_MK=/Users/yashua_evans/Desktop/Projects/Athir/Application/app/src/main/jni/Application.mk
+APP_ABI=x86
+NDK_ALL_ABIS=x86
+NDK_DEBUG=1
+APP_PLATFORM=android-23
+NDK_OUT=/Users/yashua_evans/Desktop/Projects/Athir/Application/app/build/intermediates/ndkBuild/debug/obj
+NDK_LIBS_OUT=/Users/yashua_evans/Desktop/Projects/Athir/Application/app/build/intermediates/ndkBuild/debug/lib
+APP_SHORT_COMMANDS=false
+LOCAL_SHORT_COMMANDS=false
+-B
+-n
+jvmArgs : 
+
+Build command args:

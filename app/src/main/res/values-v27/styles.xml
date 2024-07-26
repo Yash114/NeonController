@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowLayoutInDisplayCutoutMode">
+            shortEdges
+        </item>
+        <item name="colorPrimary">@color/cloud_sticky</item>
+        <item name="colorPrimaryDark">@color/cloud_scroll</item>
+        <item name="colorAccent">@color/cloud_joy</item>
+    </style>
+
+</resources>

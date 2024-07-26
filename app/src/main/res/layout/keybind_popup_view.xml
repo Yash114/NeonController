@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#aa000000"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="344dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/stroke_rounded_rect_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="36dp"
+            android:paddingBottom="36dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="@id/applyKeybindButton">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="32dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/oswald_medium"
+                        android:text="@string/enter_name"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/oswald_medium"
+                        android:lines="1"
+                        android:text="@string/show_name"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <com.gingertech.starbeam.helpers.controllers.mCheckBox
+                        android:id="@+id/showName"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/black"
+                        android:padding="2dp"
+                        app:checkboxCheckable="true" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/setButtonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:background="@drawable/stroke_rounded_rect"
+                    android:fontFamily="@font/oswald_medium"
+                    android:hint="Ex: jump"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textAutoComplete"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:textColor="@color/primary"
+                    android:textColorHint="#44F0E9D2"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/keybindHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="32dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/oswald_medium"
+                        android:text="@string/enter_keybind"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/oswald_medium"
+                        android:lines="1"
+                        android:text="@string/valid_keybind"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+
+                    <com.gingertech.starbeam.helpers.controllers.mCheckBox
+                        android:id="@+id/validID"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/black"
+                        android:padding="2dp" />
+
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:id="@+id/setKeyBindEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:background="@drawable/stroke_rounded_rect"
+                    android:completionThreshold="0"
+                    android:fontFamily="@font/oswald_medium"
+                    android:hint="Ex: space"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textAutoComplete"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:textColor="@color/primary"
+                    android:textColorHint="#44F0E9D2"
+                    android:textSize="16sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="32dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/oswald_medium"
+                        android:lines="1"
+                        android:text="Enable Haptics:"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+
+                    <com.gingertech.starbeam.helpers.controllers.mCheckBox
+                        android:id="@+id/hapticToggle"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/black"
+                        android:padding="2dp"
+                        app:checkboxCheckable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/verticalScrollGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="32dp"
+                    android:paddingTop="16dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/oswald_medium"
+                        android:lines="1"
+                        android:text="Enable Vertical Scroll:"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+
+                    <com.gingertech.starbeam.helpers.controllers.mCheckBox
+                        android:id="@+id/verticalScrollCheck"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/black"
+                        android:padding="2dp"
+                        app:checkboxCheckable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/joystickTouchRecognition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="32dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/oswald_medium"
+                        android:lines="1"
+                        android:text="Enabled Press Activation:"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+
+                    <com.gingertech.starbeam.helpers.controllers.mCheckBox
+                        android:id="@+id/joystickTouchActivationCheck"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/black"
+                        android:padding="2dp"
+                        app:checkboxCheckable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/swipeSenseGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="32dp"
+                    android:paddingTop="16dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/oswald_medium"
+                        android:lines="1"
+                        android:text="Swipe Sensitivity:"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/swipeSense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="16dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/dm_mono"
+                    android:text="@string/keybind_description"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <ImageView
+            android:id="@+id/exitKeybindButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/close"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/applyKeybindButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/oswald_medium"
+            android:text="Apply"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/down"
+            app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

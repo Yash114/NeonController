@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.gingertech.starbeam.helpers.controllers.LaunchOverlayController
+        android:id="@+id/controller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/firstTimeConnect"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/computer_icon"
+            android:layout_gravity="center"
+            app:tint="@color/primary"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connect PC"
+            android:layout_gravity="center"
+            android:fontFamily="@font/oswald_medium"
+            android:textColor="@color/primary"
+            android:textAlignment="center"
+            android:textSize="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Click the button below to connect to your PC and\nplay with your on-screen game controller!"
+            android:fontFamily="@font/dm_mono"
+            android:textColor="@color/primaryDarker"
+            android:textAlignment="center"
+            android:textSize="12dp"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/firstTimeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Connect PC"
+            android:fontFamily="@font/oswald_medium"
+            android:textColor="@color/primary"
+            android:textAlignment="center"
+            android:textSize="16dp"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/rounded_border"
+            android:backgroundTint="@color/secondary"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/deviceSearchView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/computer_icon"
+            android:layout_gravity="center"
+            app:tint="@color/primary"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Searching for PCs"
+                android:fontFamily="@font/oswald_medium"
+                android:textSize="24sp"
+                android:textColor="@color/primary"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="8dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/refresh">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/refresh"
+                android:layout_gravity="center"
+                app:tint="@color/primary"
+                />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reload"
+                    android:textSize="8sp"
+                    android:fontFamily="@font/dm_mono"
+                    android:textColor="@color/primaryDarker"/>
+
+            </LinearLayout>
+
+
+            <ProgressBar
+                android:id="@+id/loadingProgressView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/primary"                android:layout_gravity="center"
+
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select the computer you want to control."
+            android:fontFamily="@font/dm_mono"
+            android:textColor="@color/primaryDarker"
+            android:textAlignment="center"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:fontFamily="@font/dm_mono"
+            android:textSize="8sp"
+            android:textColor="@color/primary"
+            android:textAlignment="center"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="64dp"
+            android:id="@+id/noComputersFound"
+            >
+
+            <com.gingertech.starbeam.helpers.controllers.TextWithImage
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:iconText="No PCs Found"
+                app:iconImg="@drawable/cancel_icon"
+                app:iconTint="@color/red"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verify bluetooth is enabled in the\nsettings of your PC, then reload."
+                android:fontFamily="@font/dm_mono"
+                android:textColor="@color/red"
+                android:alpha="0.7"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginVertical="4dp">
+
+
+            <LinearLayout
+                android:id="@+id/bluetoothList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <TextView
+            android:id="@+id/discoverableButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connect From Computer"
+            android:fontFamily="@font/oswald_medium"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/rounded_border"
+            android:backgroundTint="@color/primary"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't see your computer?\nConnect to your device from your computer!"
+            android:fontFamily="@font/dm_mono"
+            android:textSize="8sp"
+            android:textColor="@color/primary"
+            android:alpha="0.7"
+            android:paddingTop="8dp"
+            android:textAlignment="center"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/waitingView"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="24dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ProgressBar
+            style="@android:style/Widget.Holo.ProgressBar.Large"
+            android:progressTint="@color/secondary"
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/primary"
+            android:progress="25"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waiting On Connection..."
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:fontFamily="@font/oswald_medium"
+            android:textColor="@color/primary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Should take less than 30 seconds"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:fontFamily="@font/dm_mono"
+            android:textColor="@color/primaryDarker"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <com.gingertech.starbeam.helpers.controllers.TextWithImage
+            android:id="@+id/cancel3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconText="Return"
+            app:iconTint="@color/red"
+            app:iconImg="@drawable/back_arrow"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/discoveringView"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="24dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ProgressBar
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:indeterminateTint="@color/primary"
+            android:indeterminate="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Device is now discoverable\nPlease connect to your device from your computer through bluetooth"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:fontFamily="@font/oswald_regular"
+            android:textColor="@color/primary"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <com.gingertech.starbeam.helpers.controllers.TextWithImage
+            android:id="@+id/cancel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconText="Return"
+            app:iconTint="@color/red"
+            app:iconImg="@drawable/back_arrow"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/errorView"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="24dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/baseline_bluetooth_24"
+            android:layout_gravity="center"
+            app:tint="@color/primary"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connection Error:"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:fontFamily="@font/oswald_medium"
+            android:textColor="@color/primary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please verify device and try again."
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:fontFamily="@font/dm_mono"
+            android:textColor="@color/primaryDarker"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="If issue persists try removing/forgetting\nthe device from your computer."
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:fontFamily="@font/dm_mono"
+            android:textColor="@color/primaryDarker"
+            android:paddingBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/connectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retry Device"
+            android:fontFamily="@font/oswald_medium"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/rounded_border"
+            android:backgroundTint="@color/primary"
+            android:layout_marginTop="16dp"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <com.gingertech.starbeam.helpers.controllers.TextWithImage
+            android:id="@+id/cancel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconText="Return"
+            app:iconTint="@color/red"
+            app:iconImg="@drawable/back_arrow"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/instructView"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="24dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/computer_icon"
+            android:layout_gravity="center"
+            app:tint="@color/primary"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Now Remove/Forget your device from your computer bluetooth list\nThen click reconnect below"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:fontFamily="@font/oswald_regular"
+            android:textColor="@color/primary"/>
+
+        <TextView
+            android:id="@+id/connectButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reconnect"
+            android:fontFamily="@font/oswald_medium"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:background="@drawable/rounded_border"
+            android:backgroundTint="@color/primary"
+            android:layout_marginTop="16dp"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/workingPopup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#55000000">
+
+
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_border"
+            android:backgroundTint="@color/primary"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="48dp">
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Can you move the mouse?"
+                android:fontFamily="@font/dm_mono"
+                android:textColor="@color/black"
+                android:textSize="12sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/removePopup"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/oswald_regular"
+                    android:textColor="@color/black"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/black"
+                    android:layout_marginVertical="4dp"
+                    android:alpha="0.7"/>
+
+                <TextView
+                    android:id="@+id/restartConnection"
+                    android:textAlignment="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/oswald_regular"
+                    android:textColor="@color/red"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/immersiveModeIcon_1"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_settings"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="8dp"
+        app:tint="@color/primary"
+/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/immersiveModeIcon_2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_settings"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="8dp"
+            app:tint="@color/primary" />
+
+        <com.gingertech.starbeam.helpers.controllers.TextWithImage
+            android:id="@+id/changeDevice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconText="Change Device"
+            app:iconImg="@drawable/baseline_bluetooth_24"
+            app:iconTint="@color/purple"
+            android:layout_gravity="center"/>
+
+        <com.gingertech.starbeam.helpers.controllers.TextWithImage
+            android:id="@+id/editController"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconText="Edit Controller"
+            app:iconImg="@drawable/pencil_icon"
+            app:iconTint="@color/secondary"
+            android:layout_gravity="center"/>
+
+        <com.gingertech.starbeam.helpers.controllers.TextWithImage
+            android:id="@+id/wifiplayC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconText="Wifi-Play"
+            app:iconImg="@drawable/connect"
+            app:iconTint="@color/gold"
+            android:layout_gravity="center"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+    <com.gingertech.starbeam.helpers.controllers.TextWithImage
+        android:layout_margin="8dp"
+        android:id="@+id/wifiplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:iconText="WiFi-Play"
+        app:iconImg="@drawable/connect"
+        app:iconTint="@color/purple"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

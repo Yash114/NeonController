@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/primary"
+
+    android:layout_margin="4dp">
+
+
+    <LinearLayout
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/stroke_rounded_rect_white"
+        android:paddingHorizontal="3dp"
+        android:paddingVertical="1dp">
+
+
+    <TextView
+        android:id="@+id/command"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tap:"
+        android:fontFamily="@font/oswald_medium"
+        android:textSize="12dp"
+        android:textColor="@color/black"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/parameter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="( time )"
+        android:fontFamily="@font/oswald_medium"
+        android:textSize="10dp"
+        android:textColor="@color/primary"
+        android:padding="8dp"
+        android:background="@drawable/stroke_rounded_white"
+        android:backgroundTint="@color/dark_secondary" />
+
+    <TextView
+        android:id="@+id/values"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="{ keybinds }"
+        android:fontFamily="@font/oswald_medium"
+        android:textSize="10dp"
+        android:textColor="@color/primary"
+        android:padding="8dp"
+        android:background="@drawable/stroke_rounded_white"
+        android:backgroundTint="@color/dark_secondary"
+        android:layout_marginLeft="4dp"/>
+
+</LinearLayout>
+
+</RelativeLayout>

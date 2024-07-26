@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp"
+    android:background="@drawable/black_border">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/bestValueTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Best Value"
+        android:textSize="8sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/oswald_medium" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$59.99 / year"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/oswald_medium" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/savings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save over 40%"
+        android:textSize="8sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/oswald_medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

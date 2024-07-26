@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.gingertech.starbeam.helpers.controllers.mCheckBox
+        android:id="@+id/validID"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/black"
+        android:layout_marginHorizontal="8dp"
+        android:checkable="false"
+        android:checked="true"
+        android:padding="2dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/oswald_medium"
+        android:textColor="@color/primary"
+        android:gravity="center"
+        android:translationY="-8dp"
+
+        android:text="HI!"/>
+
+</LinearLayout>

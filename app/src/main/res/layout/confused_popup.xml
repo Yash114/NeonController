@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#aa000000"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/stroke_rounded_rect_white"
+        android:padding="16dp"
+        android:layout_marginVertical="16dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarAlwaysDrawVerticalTrack="false"
+            android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/close"
+                app:tint="@color/black"
+                android:id="@+id/close"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Having trouble?\nTell us what is wrong"
+            android:layout_weight="1"
+            android:fontFamily="@font/oswald_medium"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/basic_black_border_no"
+            android:hint="Enter Email"
+            android:fontFamily="@font/oswald_medium"
+            android:textSize="12sp"
+            android:padding="8dp"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/basic_black_border_no"
+                android:hint="Enter Message"
+                android:fontFamily="@font/oswald_medium"
+                android:textSize="12sp"
+                android:padding="8dp"
+                android:imeOptions="actionDone"
+                android:inputType="textMultiLine"/>
+
+            <TextView
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:textAlignment="center"
+                android:layout_margin="8dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/oswald_medium"
+                android:textColor="@color/secondary"/>
+
+        </LinearLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

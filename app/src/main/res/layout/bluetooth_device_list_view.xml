@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_border"
+        >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_bluetooth_24"
+            android:tint="@color/primary"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="4dp"
+            android:padding="2dp"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/blue"/>
+
+    <TextView
+        android:id="@+id/name"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This is a test namedf asdhf dsfuds fisdif sdifhdsu ifhdisu fhdsiufh dsafhidhfi aifiusfia sdif  sdfiu h"
+        android:fontFamily="@font/oswald_regular"
+        android:textColor="@color/primary"
+        android:lines="1"
+        android:ellipsize="end"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="6dp"
+        android:textSize="14sp"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

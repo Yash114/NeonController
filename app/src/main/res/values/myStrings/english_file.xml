@@ -1,0 +1,401 @@
+<resources>
+    <string name="app_name">NEON</string>
+    <string name="app_name_lowercase">Neon</string>
+
+    <string name="accessibility_service_description">NEON</string>
+
+    <string name="button_details">Button Details</string>
+    <string name="set_keybind">Set Keybind</string>
+    <string name="description_normal_button">Description: Normal Button</string>
+    <string name="available_modifiers">Available Modifiers</string>
+    <string name="overlay_button_color_preview">Overlay Button Color Preview</string>
+
+    <string name="this_creates_a_normal_button">This Creates a New Normal Button</string>
+
+    <string name="button">Normal Button</string>
+    <string name="button_discript">This button simply sends whatever key you set as a keybind when clicked and will release when you release the button."</string>
+    <string name="button_mod">\"&amp;\" Modifier: more keybinds to be pressed at the same time. EX: SPACE&amp;7 Do not put spaces in-between keys.</string>
+
+    <string name="stickybutton">Sticky Button</string>
+    <string name="stickybutton_discript">This button holds the keybind clicked until it is clicked again."</string>
+    <string name="stickybutton_mod">\"&amp;\" Modifier: more keybinds to be pressed at the same time. Do not put spaces in-between keys. EX: SPACE&amp;7&amp;SHIFT</string>
+
+    <string name="cyclebutton">Cycle Button</string>
+    <string name="cyclebutton_discript">This button cycles through a defined list of keybinds. Each click goes to the next keybind."</string>
+    <string name="cyclebutton_mod">\":\" Modifier: Separates items within the cycling list. An infinite amount of keys can be list using this modifier. EX: 1:2:3:4</string>
+
+    <string name="joybutton">Joy Button</string>
+    <string name="joybutton_discript">This button creates a joystick button that allows users to slide in 4 directions to press the corresponding keybind."</string>
+    <string name="joybutton_mod">\":\" Modifier: Separates items within the joystick list. Only 4 keys can be set using this modifier, no more no less. EX: \"W:A:S:D\"</string>
+
+    <string name="scrollbutton">Scroll Button</string>
+    <string name="scrollbutton_discript">This button allows for horizontal scrolling through a keybind list. You can select which keybind you want to press by swiping left or right."</string>
+    <string name="scrollbutton_mod">\":\" Modifier: Separates items within the cycling list. An infinite amount of keys can be list using this modifier. EX: 1:2:3:4:5</string>
+
+        <!-- Shortcut strings -->
+        <string name="scut_deleted_pc">PC deleted</string>
+        <string name="scut_not_paired">PC not paired</string>
+        <string name="scut_pc_not_found">PC not found</string>
+        <string name="scut_invalid_uuid">Provided PC is not valid</string>
+        <string name="scut_invalid_app_id">Provided App is not valid</string>
+
+        <!-- Help strings -->
+        <string name="help_loading_title">Help Viewer</string>
+        <string name="help_loading_msg">Loading help page…</string>
+
+        <!-- PC view menu entries -->
+        <string name="pcview_menu_header_online">Online</string>
+        <string name="pcview_menu_header_offline">Offline</string>
+        <string name="pcview_menu_header_unknown">Refreshing</string>
+        <string name="pcview_menu_app_list">View All Apps</string>
+        <string name="pcview_menu_pair_pc">Pair with PC</string>
+        <string name="pcview_menu_unpair_pc">Unpair</string>
+        <string name="pcview_menu_send_wol">Send Wake-On-LAN request</string>
+        <string name="pcview_menu_delete_pc">Delete PC</string>
+        <string name="pcview_menu_test_network">Test Network Connection</string>
+        <string name="pcview_menu_details">View Details</string>
+        <string name="pcview_menu_eol">NVIDIA GameStream End-of-Service</string>
+
+        <!-- Network test strings -->
+        <string name="nettest_title_waiting">Testing Network Connection</string>
+        <string name="nettest_text_waiting">Neon is testing your network connection to determine if any required ports are blocked.\n\nThis may take a few seconds…</string>
+        <string name="nettest_title_done">Network Test Complete</string>
+        <string name="nettest_text_success">Your network does not appear to be blocking Neon. If you still have trouble connecting, check your PC\'s firewall settings.\n\nIf you are trying to stream over the Internet, install the Neon Internet Hosting Tool on your PC and run the included Internet Streaming Tester to check your PC\'s Internet connection.</string>
+        <string name="nettest_text_inconclusive">The network test could not be performed because none of Neon\'s connection testing servers were reachable. Check your Internet connection or try again later.</string>
+        <string name="nettest_text_failure">Your device\'s current network connection seems to be blocking Neon. Streaming over the Internet may not work while connected to this network.\n\nThe following network ports were blocked:\n</string>
+        <string name="nettest_text_blocked">Your device\'s current network connection is blocking Neon. Streaming over the Internet may not work while connected to this network.</string>
+
+        <!-- Pair messages -->
+        <string name="pairing">Pairing…</string>
+        <string name="pair_pc_offline">Computer is offline</string>
+        <string name="pair_pc_ingame">Computer is currently in a game. You must close the game before pairing.</string>
+        <string name="pair_pairing_title">Pairing</string>
+        <string name="pair_pairing_msg">Please enter the following PIN on the target PC:</string>
+        <string name="pair_pairing_help">If your host PC is running Sunshine, navigate to the Sunshine web UI to enter the PIN.</string>
+        <string name="pair_incorrect_pin">Incorrect PIN</string>
+        <string name="pair_fail">Pairing failed</string>
+        <string name="pair_already_in_progress">Pairing already in progress</string>
+
+        <!-- WOL messages -->
+        <string name="wol_pc_online">Computer is online</string>
+        <string name="wol_no_mac">Unable to wake PC because there is no stored MAC address</string>
+        <string name="wol_waking_pc">Waking PC…</string>
+        <string name="wol_waking_msg">It may take a few seconds for your PC to wake up.
+	    If it doesn\'t, make sure it\'s configured properly for Wake-On-LAN.
+    </string>
+        <string name="wol_fail">Failed to send Wake-On-LAN packets</string>
+
+        <!-- Unpair messages -->
+        <string name="unpairing">Unpairing…</string>
+        <string name="unpair_success">Unpaired successfully</string>
+        <string name="unpair_fail">Failed to unpair</string>
+        <string name="unpair_error">Device was not paired</string>
+
+        <!-- Errors -->
+        <string name="error_pc_offline">Computer is offline</string>
+        <string name="error_manager_not_running">The ComputerManager service is not running. Please wait a few seconds or restart the app.</string>
+        <string name="error_unknown_host">Failed to resolve host</string>
+        <string name="error_404">GFE returned an HTTP 404 error. Make sure your PC is running a supported GPU.
+	    Using remote desktop software can also cause this error. Try rebooting your machine or reinstalling GFE.
+    </string>
+        <string name="title_decoding_error">Video Decoder Crashed</string>
+        <string name="message_decoding_error">Neon has crashed due to an incompatibility with this device\'s video decoder. Try adjusting the streaming settings if the crashes continue.</string>
+        <string name="title_decoding_reset">Video Settings Reset</string>
+        <string name="message_decoding_reset">Your device\'s video decoder continues to crash at your selected streaming settings. Your streaming settings have been reset to default.</string>
+        <string name="error_usb_prohibited">USB access is prohibited by your device administrator. Check your Knox or MDM settings.</string>
+        <string name="unable_to_pin_shortcut">Your current launcher does not allow for creating pinned shortcuts.</string>
+        <string name="video_decoder_init_failed">Video decoder failed to initialize. Your device may not support the selected resolution or frame rate.</string>
+        <string name="no_video_received_error">No video received from host.</string>
+        <string name="no_frame_received_error">Your network connection isn\'t performing well. Reduce your video bitrate setting or try a faster connection.</string>
+        <string name="early_termination_error">Something went wrong on your host PC when starting the stream.\n\nMake sure you don\'t have any DRM-protected content open on your host PC. You can also try restarting your host PC.</string>
+        <string name="frame_conversion_error">The host PC reported a fatal video encoding error.\n\nTry disabling HDR mode, changing the streaming resolution, or changing your host PC\'s display resolution.</string>
+        <string name="check_ports_msg">Check your firewall and port forwarding rules for port(s):</string>
+
+        <!-- Start application messages -->
+        <string name="conn_establishing_title">Establishing Connection</string>
+        <string name="conn_establishing_msg">Starting connection</string>
+        <string name="conn_metered">Warning: Your active network connection is metered!</string>
+        <string name="conn_client_latency">Average frame decoding latency:</string>
+        <string name="conn_client_latency_hw">hardware decoder latency:</string>
+        <string name="conn_hardware_latency">Average hardware decoding latency:</string>
+        <string name="conn_starting">Starting</string>
+        <string name="conn_error_title">Connection Error</string>
+        <string name="conn_error_msg">Failed to start</string>
+        <string name="conn_terminated_title">Connection Terminated</string>
+        <string name="conn_terminated_msg">The connection was terminated</string>
+
+        <!-- General strings -->
+        <string name="ip_hint">IP address of host PC</string>
+        <string name="searching_pc">Searching for host PCs on your local network…\nUse the tutorial video below to setup your computer.</string>
+        <string name="yes">Yes</string>
+        <string name="no">No</string>
+        <string name="lost_connection">Lost connection to PC</string>
+        <string name="title_details">Details</string>
+        <string name="help">Help</string>
+        <string name="delete_pc_msg">Are you sure you want to delete this PC?</string>
+        <string name="slow_connection_msg">Slow connection to PC\nReduce your bitrate</string>
+        <string name="poor_connection_msg">Poor connection to PC</string>
+        <string name="perf_overlay_streamdetails">Video stream: %1$s %2$.2f FPS</string>
+        <string name="perf_overlay_decoder">Decoder: %1$s</string>
+        <string name="perf_overlay_incomingfps">Incoming frame rate from network: %1$.2f FPS</string>
+        <string name="perf_overlay_renderingfps">Rendering frame rate: %1$.2f FPS</string>
+        <string name="perf_overlay_netdrops">Frames dropped by your network connection: %1$.2f%%</string>
+        <string name="perf_overlay_netlatency">Average network latency: %1$d ms (variance: %2$d ms)</string>
+        <string name="perf_overlay_dectime">Average decoding time: %1$.2f ms</string>
+
+        <!-- AppList activity -->
+        <string name="applist_connect_msg">Connecting to PC…</string>
+        <string name="applist_menu_resume">Resume Session</string>
+        <string name="applist_menu_quit">Quit Session</string>
+        <string name="applist_menu_quit_and_start">Quit Current Game and Start</string>
+        <string name="applist_menu_cancel">Cancel</string>
+        <string name="applist_menu_details">View Details</string>
+        <string name="applist_menu_scut">Create Shortcut</string>
+        <string name="applist_menu_tv_channel">Add to Channel</string>
+        <string name="applist_menu_hide_app">Hide App</string>
+        <string name="applist_refresh_title">App List</string>
+        <string name="applist_refresh_msg">Refreshing apps…</string>
+        <string name="applist_refresh_error_title">Error</string>
+        <string name="applist_refresh_error_msg">Failed to get app list</string>
+        <string name="applist_quit_app">Quitting</string>
+        <string name="applist_quit_success">Successfully quit</string>
+        <string name="applist_quit_fail">Failed to quit</string>
+        <string name="applist_quit_confirmation">Are you sure you want to quit the running app? All unsaved data will be lost.</string>
+        <string name="applist_details_id">App ID:</string>
+
+        <!-- Add computer manually activity -->
+        <string name="title_add_pc">Add PC Manually</string>
+        <string name="msg_add_pc">Connecting to the PC…</string>
+        <string name="addpc_fail">Unable to connect to the specified computer. Make sure the required ports are allowed through the firewall.</string>
+        <string name="addpc_success">Successfully added computer</string>
+        <string name="addpc_unknown_host">Unable to resolve PC address. Make sure you didn\'t make a typo in the address.</string>
+        <string name="addpc_enter_ip">You must enter an IP address</string>
+        <string name="addpc_wrong_sitelocal">That address doesn\'t look right. You must use your router\'s public IP address for streaming over the Internet.</string>
+
+        <!-- Preferences -->
+        <string name="category_basic_settings">Basic Settings</string>
+        <string name="title_resolution_list">Video resolution</string>
+        <string name="summary_resolution_list">Increase to improve image clarity. Decrease for better performance on lower end devices and slower networks.</string>
+        <string name="title_native_res_dialog">Native Resolution Warning</string>
+        <string name="text_native_res_dialog">Native resolution modes are not officially supported by GeForce Experience, so it will not set your host display resolution itself. You will need to set it manually while in game.\n\nIf you choose to create a custom resolution in NVIDIA Control Panel to match your device resolution, please ensure you have read and understood NVIDIA\'s warning regarding possible monitor damage, PC instability, and other potential problems.\n\nWe are not responsible for any problems resulting from creating a custom resolution on your PC.\n\nFinally, your device or host PC may not support streaming at native resolution. If it doesn\'t work on your device, you\'re just out of luck unfortunately.</string>
+        <string name="title_fps_list">Video frame rate</string>
+        <string name="summary_fps_list">Increase for a smoother video stream. Decrease for better performance on lower end devices.</string>
+        <string name="title_seekbar_bitrate">Video bitrate</string>
+        <string name="summary_seekbar_bitrate">Increase for better image quality. Decrease to improve performance on slower connections.</string>
+        <string name="suffix_seekbar_bitrate_mbps">Mbps</string>
+        <string name="title_checkbox_stretch_video">Stretch video to full-screen</string>
+        <string name="resolution_prefix_native">Native</string>
+        <string name="resolution_prefix_native_fullscreen">Native Full-Screen</string>
+        <string name="resolution_prefix_native_landscape">(Landscape)</string>
+        <string name="resolution_prefix_native_portrait">(Portrait)</string>
+
+        <string name="category_audio_settings">Audio Settings</string>
+        <string name="title_audio_config_list">Surround sound configuration</string>
+        <string name="summary_audio_config_list">Enable 5.1 or 7.1 surround sound for home-theater systems</string>
+        <string name="title_checkbox_enable_audiofx">Enable system equalizer support</string>
+        <string name="summary_checkbox_enable_audiofx">Allows audio effects to function while streaming, but may increase audio latency</string>
+
+        <string name="category_input_settings">Input Settings</string>
+        <string name="title_checkbox_touchscreen_trackpad">Use the touchscreen as a trackpad</string>
+        <string name="summary_checkbox_touchscreen_trackpad">If enabled, the touchscreen acts like a trackpad. If disabled, the touchscreen directly controls the mouse cursor.</string>
+        <string name="title_checkbox_multi_controller">Automatic gamepad presence detection</string>
+        <string name="summary_checkbox_multi_controller">Unchecking this option forces a gamepad to always be present</string>
+        <string name="title_checkbox_vibrate_fallback">Emulate rumble support with vibration</string>
+        <string name="summary_checkbox_vibrate_fallback">Vibrates your device to emulate rumble if your gamepad does not support it</string>
+        <string name="title_seekbar_deadzone">Adjust analog stick deadzone</string>
+        <string name="summary_seekbar_deadzone">Note: Some games can enforce a larger deadzone than what Neon is configured to use.</string>
+        <string name="suffix_seekbar_deadzone">%</string>
+        <string name="title_checkbox_xb1_driver">Xbox 360/One USB gamepad driver</string>
+        <string name="summary_checkbox_xb1_driver">Enables a built-in USB driver for devices without native Xbox controller support</string>
+        <string name="title_checkbox_usb_bind_all">Override native Xbox gamepad support</string>
+        <string name="summary_checkbox_usb_bind_all">Use Neon\'s USB driver for all supported gamepads, even if native Xbox controller support is present</string>
+        <string name="title_checkbox_mouse_emulation">Mouse emulation via gamepad</string>
+        <string name="summary_checkbox_mouse_emulation">Long pressing the Start button will switch the gamepad into mouse mode</string>
+        <string name="title_checkbox_mouse_nav_buttons">Enable back and forward mouse buttons</string>
+        <string name="summary_checkbox_mouse_nav_buttons">Enabling this option may break right clicking on some buggy devices</string>
+        <string name="title_checkbox_flip_face_buttons">Flip face buttons</string>
+        <string name="summary_checkbox_flip_face_buttons">Switches the face buttons A/B and X/Y for gamepads and the on-screen controls</string>
+        <string name="title_checkbox_absolute_mouse_mode">Remote desktop mouse mode</string>
+        <string name="summary_checkbox_absolute_mouse_mode">This can make mouse acceleration behave more naturally for remote desktop usage, but it is incompatible with many games.</string>
+
+        <string name="category_on_screen_controls_settings">On-screen Controls Settings</string>
+        <string name="title_checkbox_show_onscreen_controls">Show on-screen controls</string>
+        <string name="summary_checkbox_show_onscreen_controls">Show virtual controller overlay on touchscreen</string>
+        <string name="title_checkbox_vibrate_osc">Enable vibration</string>
+        <string name="summary_checkbox_vibrate_osc">Vibrates your device to emulate rumble for the on-screen controls</string>
+        <string name="title_only_l3r3">Only show L3 and R3</string>
+        <string name="summary_only_l3r3">Hide all virtual buttons except L3 and R3</string>
+        <string name="title_reset_osc">Clear saved on-screen controls layout</string>
+        <string name="summary_reset_osc">Resets all on-screen controls to their default size and position</string>
+        <string name="dialog_title_reset_osc">Reset Layout</string>
+        <string name="dialog_text_reset_osc">Are you sure you want to delete your saved on-screen controls layout?</string>
+        <string name="toast_reset_osc_success">On-screen controls reset to default</string>
+        <string name="title_osc_opacity">Change opacity of on-screen controls</string>
+        <string name="summary_osc_opacity">Make the on-screen controls more/less transparent</string>
+        <string name="dialog_title_osc_opacity">Change opacity</string>
+        <string name="suffix_osc_opacity">%</string>
+
+        <string name="category_ui_settings">UI Settings</string>
+        <string name="title_checkbox_enable_pip">Enable Picture-in-Picture observer mode</string>
+        <string name="summary_checkbox_enable_pip">Allows the stream to be viewed (but not controlled) while multitasking</string>
+        <string name="title_language_list">Language</string>
+        <string name="summary_language_list">Language to use for Neon</string>
+        <string name="title_checkbox_small_icon_mode">Use small box art</string>
+        <string name="summary_checkbox_small_icon_mode">Smaller box art in the app grid allows more apps to be visible on screen</string>
+
+        <string name="category_host_settings">Host Settings</string>
+        <string name="title_checkbox_enable_sops">Optimize game settings</string>
+        <string name="summary_checkbox_enable_sops">Allow GFE to modify game settings for optimal streaming</string>
+        <string name="title_checkbox_host_audio">Play audio on PC</string>
+        <string name="summary_checkbox_host_audio">Play audio from the computer and this device</string>
+
+        <string name="category_advanced_settings">Advanced Settings</string>
+        <string name="title_unlock_fps">Unlock all possible frame rates</string>
+        <string name="summary_unlock_fps">Streaming at 90 or 120 FPS may reduce latency on high-end devices but can cause lag or instability on devices that can\'t support it</string>
+        <string name="title_checkbox_reduce_refresh_rate">Allow refresh rate reduction</string>
+        <string name="summary_checkbox_reduce_refresh_rate">Lower display refresh rates can save power at the expense of some additional video latency</string>
+        <string name="title_checkbox_disable_warnings">Disable warning messages</string>
+        <string name="summary_checkbox_disable_warnings">Disable on-screen connection warning messages while streaming</string>
+        <string name="title_disable_frame_drop">Never drop frames</string>
+        <string name="summary_disable_frame_drop">May reduce micro-stuttering on some devices, but can increase latency</string>
+        <string name="title_video_format">Change HEVC settings</string>
+        <string name="summary_video_format">HEVC lowers video bandwidth requirements but requires a newer device</string>
+        <string name="title_enable_hdr">Enable HDR (Experimental)</string>
+        <string name="summary_enable_hdr">Stream HDR when the game and PC GPU support it. HDR requires a GPU with HEVC Main 10 encoding support.</string>
+        <string name="title_full_range">Force full range video (Experimental)</string>
+        <string name="summary_full_range">This will cause loss of detail in light and dark areas if your device doesn\'t properly display full range video content.</string>
+        <string name="title_enable_perf_overlay">Show performance stats while streaming</string>
+        <string name="summary_enable_perf_overlay">Display real-time stream performance information while streaming</string>
+        <string name="title_enable_post_stream_toast">Show latency message after streaming</string>
+        <string name="summary_enable_post_stream_toast">Display a latency information message after the stream ends</string>
+
+        <string name="category_help">Help</string>
+        <string name="title_setup_guide">Setup guide</string>
+        <string name="summary_setup_guide">View instructions on how to set up your gaming PC for streaming</string>
+        <string name="title_troubleshooting">Troubleshooting guide</string>
+        <string name="summary_troubleshooting">View tips for diagnosing and fixing common streaming issues</string>
+        <string name="title_privacy_policy">Privacy policy</string>
+        <string name="summary_privacy_policy">View Neon\'s privacy policy</string>
+
+        <!-- Array strings -->
+        <string name="resolution_360p">360p</string>
+        <string name="resolution_480p">480p</string>
+        <string name="resolution_720p">720p</string>
+        <string name="resolution_1080p">1080p</string>
+        <string name="resolution_1440p">1440p</string>
+        <string name="resolution_4k">4K</string>
+
+        <string name="fps_30">30 FPS</string>
+        <string name="fps_60">60 FPS</string>
+        <string name="fps_90">90 FPS</string>
+        <string name="fps_120">120 FPS</string>
+
+        <string name="audioconf_stereo">Stereo</string>
+        <string name="audioconf_51surround">5.1 Surround Sound</string>
+        <string name="audioconf_71surround">7.1 Surround Sound</string>
+
+        <string name="videoformat_hevcauto">Automatic (Recommended)</string>
+        <string name="videoformat_hevcalways">Prefer HEVC</string>
+        <string name="videoformat_hevcnever">Never use HEVC</string>
+
+        <string name="title_frame_pacing">Video frame pacing</string>
+        <string name="summary_frame_pacing">Specify how to balance video latency and smoothness</string>
+        <string name="pacing_latency">Prefer lowest latency</string>
+        <string name="pacing_balanced">Balanced</string>
+        <string name="pacing_balanced_alt">Balanced with FPS limit</string>
+        <string name="pacing_smoothness">Prefer smoothest video (may significantly increase latency)</string>
+
+    <string name="welcome">WELCOME!</string>
+    <string name="keybind_description"><![CDATA[Type in the keybind you wish to use.\nYou can set xbox controller keys, keyboard keys or mouse buttons.\nToggle <show name> to show the button name.]]></string>
+    <string name="tutorial_video"><u>Tutorial Video</u></string>
+    <string name="premiumCostDescription">(cheaper than a controller)</string>
+    <string name="_5_play_your_pc_games">5. Play Your Pc Games!</string>
+    <string name="_4_enter_pin_onto_computer">4. Enter Pin onto computer</string>
+    <string name="_3_create_sunshine_login_info">3. Create Sunshine Login Info</string>
+    <string name="_2_install_sunshine">2. Install Sunshine</string>
+    <string name="_1_download_sunshine">1. Download Sunshine</string>
+    <string name="connection_steps_below">Connection Steps Below</string>
+    <string name="no_computers_found">No Computers Found</string>
+    <string name="are_you_sure_you_want_to_delete_this_layout">Are you sure you want to delete this layout?</string>
+    <string name="layouts">Layouts</string>
+    <string name="settings">Settings</string>
+    <string name="launch">Launch</string>
+    <string name="premium">Premium</string>
+    <string name="normal">Normal</string>
+    <string name="basic_button_object">Basic button object</string>
+    <string name="sticky">Sticky</string>
+    <string name="click_once_to_hold_click_again_to_release">Click once to hold, click again to release</string>
+    <string name="click_to_cycle_through_a_list_of_keybinds">Click to cycle through a list of keybinds</string>
+    <string name="cycle">Cycle</string>
+    <string name="joy">Joy</string>
+    <string name="joystick_action_button">Joystick action button</string>
+    <string name="scroll">Scroll</string>
+    <string name="scroll_through_a_list_of_keybinds">Scroll through a list of keybinds</string>
+    <string name="apply">APPLY</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="show_name">Show Name:</string>
+    <string name="ex_jump">EX: Jump</string>
+    <string name="enter_keybind">Enter Keybind</string>
+    <string name="valid_keybind">Valid Keybind:</string>
+    <string name="texture">texture</string>
+    <string name="edit">edit</string>
+    <string name="info">info</string>
+    <string name="save">save</string>
+    <string name="reset">Reset</string>
+    <string name="delete">Delete</string>
+    <string name="next"><![CDATA[Next ->]]></string>
+    <string name="done">"Done "</string>
+    <string name="welcome_to_neon_play_any_pc_game_on_your_phone_with_ease">Welcome to NEON!\nPlay any PC game on your phone with ease!</string>
+    <string name="this_is_the_layout_list_page_this_is_where_you_can_see_all_your_game_controllers">This is the layout list Page. This is where you can see all your game controllers.</string>
+    <string name="click_on_edit_to_begin_editing_your_game_controller">Click on EDIT to begin editing your game controller.</string>
+    <string name="there_are_2_default_layouts_one_for_keyboard_controls_and_the_other_for_xbox_controls_choose_the_one_best_for_you">There are 2 default layouts: one for keyboard controls and the other for xbox controls. Choose the one best for you.</string>
+    <string name="to_create_a_new_custom_layout_click_on_the_new_button">To create a new custom layout click on the NEW button.</string>
+    <string name="to_delete_a_layout_click_on_the_delete_button">To delete a layout click on the DELETE button.</string>
+    <string name="to_customize_a_layout_click_on_the_edit_button">To customize a layout, click on the EDIT button.</string>
+    <string name="after_selecting_the_layout_you_want_click_on_the_rocket_to_use_it_with_your_game">After selecting the layout you want, click on the ROCKET to use it with your game.</string>
+    <string name="this_is_the_layout_create_page_this_is_where_you_edit_layouts">This is the layout create page! This is where you edit layouts.</string>
+    <string name="clicking_on_this_button_will_open_the_button_drawer">Clicking on this button will open the button drawer.</string>
+    <string name="this_is_the_button_drawer_this_is_where_you_can_create_buttons_for_your_game_layouts">This is the button drawer. This is where you can create buttons for your game layouts.</string>
+    <string name="there_are_many_different_types_of_buttons_with_different_functions_click_a_button_to_create_one">There are many different types of buttons with different functions. Click a button to create one.</string>
+    <string name="you_can_now_move_the_button_by_dragging_and_you_can_scale_it_by_using_the_pinch_gesture">You can now move the button by dragging and you can scale it by using the pinch gesture.</string>
+    <string name="to_learn_more_about_how_the_selected_button_works_click_on_the_info_button">To learn more about how the selected button works, click on the info button.</string>
+    <string name="to_change_the_keybind_of_the_selected_button_click_on_the_edit_button">To change the keybind of the selected button click on the edit button.</string>
+    <string name="to_change_the_look_of_the_selected_button_click_on_the_texture_button">To change the look of the selected button click on the texture button.</string>
+    <string name="to_delete_a_button_click_on_the_delete_button_in_the_left_corner">To delete a button click on the delete button in the left corner.</string>
+    <string name="to_reset_the_layout_click_on_the_reset_button">To reset the layout click on the reset button.</string>
+    <string name="to_learn_more_about_this_page_watch_this_video_tutorial">To learn more about this page watch this video tutorial.</string>
+    <string name="if_you_want_to_start_playing_with_your_current_layout_click_on_the_launch_button">If you want to start playing with your current layout, click on the launch button.</string>
+    <string name="to_go_back_to_the_layout_list_click_on_the_exit_button">To go back to the layout list click on the exit button.</string>
+    <string name="this_is_the_computer_list_page_this_is_where_you_can_see_all_the_computers_you_are_able_to_connect_to">This is the computer list page! This is where you can see all the computers you are able to connect to.</string>
+    <string name="if_you_see_a_computer_click_on_it_to_start_playing">If you see a computer click on it to start playing!</string>
+    <string name="if_you_do_not_see_any_computer_simply_follow_this_tutorial_to_get_started">If you do not see any computer simply follow this tutorial to get started.</string>
+    <string name="when_you_see_a_computer_appear_in_the_list_click_on_it_to_connect">When you see a computer appear in the list click on it to connect.</string>
+    <string name="if_you_see_a_computer_with_a_yellow_warning_then_the_computer_is_having_connectivity_issues_try_restarting_the_app_or_changing_networks">If you see a computer with a yellow warning then the computer is having connectivity issues, try restarting the app or changing networks.</string>
+    <string name="this_is_the_game_list_page_this_is_where_you_can_see_all_the_games_you_can_launch">This is the game list page! This is where you can see all the games you can launch.</string>
+    <string name="if_you_do_not_see_any_games_simply_add_your_desired_game_in_the_applications_tab_of_sunshine">If you do not see any games, simply add your desired game in the applications tab of sunshine</string>
+    <string name="for_more_information_refer_to_the_provided_tutorial">For more information refer to the provided tutorial.</string>
+    <string name="if_you_see_a_game_click_on_it_to_start_playing">If you see a game, click on it to start playing.</string>
+    <string name="this_is_the_launch_page_this_is_where_you_actually_play_your_games">This is the Launch Page! This is where you actually play your games.</string>
+    <string name="the_layout_you_selected_within_the_layouts_list_page_will_appear_above_your_game">The layout you selected within the layouts list page will appear above your game.</string>
+    <string name="clicking_on_the_buttons_will_activate_whatever_keybinds_they_have_been_given">Clicking on the buttons will activate whatever keybinds they have been given.</string>
+    <string name="swiping_on_the_screen_will_move_the_mouse_cursor_like_a_trackpad">Swiping on the screen will move the mouse cursor like a trackpad.</string>
+    <string name="tapping_will_left_click_the_mouse">Tapping will left click the mouse.</string>
+    <string name="swiping_the_screen_with_2_fingers_will_scroll_the_screen">Swiping the screen with 2 fingers will scroll the screen.</string>
+    <string name="tapping_the_screen_with_3_fingers_will_show_the_keyboard">Tapping the screen with 3 fingers will show the keyboard.</string>
+    <string name="if_you_have_an_xbox_controller_simply_connect_to_it_and_neon_will_automatically_connect">If you have an xbox controller simply connect to it and NEON will automatically connect.</string>
+    <string name="if_the_screen_is_blank_you_may_have_to_manually_open_the_desired_application_on_your_computer">If the screen is blank you may have to manually open the desired application on your computer</string>
+    <string name="exiting_the_selected_game_will_end_the_connection">Exiting the selected game will end the connection.</string>
+    <string name="have_fun">Have Fun!</string>
+    <string name="this_layout_is_locked_try_premium_to_unlock">This layout is locked, try premium to unlock.</string>
+    <string name="default_keyboard_layout">Default Keyboard Layout</string>
+    <string name="default_xbox_controller_layout">Default xbox controller layout</string>
+    <string name="restart_the_app_to_apply_changes">Restart the app to apply changes.</string>
+    <string name="invalid_keybind">Invalid Keybind</string>
+    <string name="too_many_buttons_feature_requires_requires_premium">Too many buttons, feature requires premium</string>
+    <string name="cannot_delete_the_default_layouts_please_choose_another">Cannot delete the default layouts, please choose another</string>
+    <string name="could_not_connect_to_the_internet_please_reconnect_and_restart_the_app">Could not connect to the internet, please reconnect and restart the app.</string>
+    <string name="test">TEST</string>
+    <string name="are_you_sure_you_want_to_reset_this_layout">Are you sure you want to reset this layout?</string>
+
+
+</resources>

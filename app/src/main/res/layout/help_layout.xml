@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/stroke_rounded_rect_white"
+        android:clickable="true"
+        android:layout_margin="8dp"
+        android:elevation="8dp">
+
+
+    <TextView
+        android:id="@+id/textContent"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+
+        android:text="Welcome to AETHR! \nThis is the app where you can play any PC game \non your phone with ease!"
+
+        android:textColor="@color/black"
+        android:fontFamily="@font/sans_light"
+        android:textSize="14sp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/linkText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/oswald_medium "
+            android:textColor="@color/primary"
+            android:textSize="16sp"
+            android:text="@string/tutorial_video"
+            app:layout_constraintTop_toBottomOf="@id/textContent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="6dp"
+            android:background="@drawable/border_red"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/linkText"
+            android:layout_marginHorizontal="8dp">
+
+            <TextView
+                android:id="@+id/finishButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Close"
+
+                android:textColor="@color/secondary"
+                android:fontFamily="@font/oswald_medium"
+                android:textSize="16sp"
+                android:padding="8dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/nextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:text="Next ->"
+
+                android:textColor="@color/secondary"
+                android:fontFamily="@font/oswald_medium"
+                android:textSize="16sp"
+                android:padding="8dp"/>
+
+        </LinearLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/pointer"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:src="@drawable/touch_icon"
+
+        android:rotation="-30"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

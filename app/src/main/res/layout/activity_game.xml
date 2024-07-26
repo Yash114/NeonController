@@ -1,0 +1,166 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".limelight.Game" >
+
+    <RelativeLayout
+        android:id="@+id/blackoutBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="invisible"
+        />
+
+    <com.gingertech.starbeam.limelight.ui.StreamView
+        android:visibility="visible"
+        android:layout_centerInParent="true"
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:focusedByDefault="true"
+        android:defaultFocusHighlightEnabled="false">
+    <requestFocus />
+
+    </com.gingertech.starbeam.limelight.ui.StreamView>
+
+
+    <View
+        android:id="@+id/backgroundTouchView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+
+    <com.gingertech.starbeam.helpers.controllers.LaunchOverlayController
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
+
+    <RelativeLayout
+        android:id="@+id/discoveringView"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000">
+
+        <ProgressBar
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:indeterminate="true"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/primary"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/performanceOverlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="82dp"
+        android:layout_gravity="left"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:fontFamily="@font/dm_mono"
+        android:background="#80000000"
+        android:preferKeepClear="true"
+        android:visibility="gone"
+        android:textColor="@color/primary"
+        android:alpha="100"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/notificationOverlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="42dp"
+        android:layout_gravity="right"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="right"
+        android:background="#80000000"
+        android:preferKeepClear="true"
+        android:textColor="@color/primary"
+        android:alpha="100"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <com.gingertech.starbeam.helpers.controllers.TextWithImage
+        android:id="@+id/immersiveModeIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:iconImg="@drawable/fullscreen_icon"
+        app:iconText="Fullscreen"
+        app:iconTint="@color/primary"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="8dp"/>
+
+    <com.gingertech.starbeam.helpers.controllers.TextWithImage
+        android:id="@+id/reloadIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:iconImg="@drawable/refresh"
+        app:iconText="Reconnect"
+        app:iconTint="@color/secondary"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_toRightOf="@id/immersiveModeIcon"
+        android:layout_marginBottom="8dp"/>
+
+    <com.gingertech.starbeam.helpers.controllers.TextWithImage
+        android:id="@+id/editLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:iconImg="@drawable/pencil_icon"
+        app:iconText="Edit Controller"
+        app:iconTint="@color/secondary"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="96dp"
+        android:layout_marginBottom="8dp"/>
+
+<!--    <com.gingertech.starbeam.helpers.controllers.TextWithImage-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:iconImg="@drawable/options_icon"-->
+<!--        app:iconText="Options"-->
+<!--        app:iconTint="@color/primary"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:layout_toRightOf="@id/immersiveModeIcon"-->
+<!--        android:layout_marginBottom="16dp"/>-->
+
+    <ImageView
+        android:id="@+id/immersiveModeIcon_1"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/fullscreen_icon"
+        app:tint="@color/primary"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        android:padding="2dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/black"
+
+        android:elevation="8dp"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="4dp"
+    android:layout_marginVertical="4dp"
+    android:paddingHorizontal="16dp"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/basic_bordered_background"
+        android:backgroundTint="@color/primary"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:id="@+id/main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="8dp"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="4dp"
+            android:elevation="8dp">
+
+            <TextView
+                android:id="@+id/command_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_medium"
+                android:lines="1"
+                android:textSize="24sp"
+                android:text="Command Name"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/command_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald_medium"
+                android:lines="1"
+                android:text="This is a quick description"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                />
+
+        </LinearLayout>
+
+
+        <com.gingertech.starbeam.helpers.controllers.TextWithImage
+            android:id="@+id/editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconText="Edit"
+            app:iconImg="@drawable/pencil_icon"
+            app:iconTint="@color/black"
+            android:layout_gravity="center" />
+
+        <com.gingertech.starbeam.helpers.controllers.TextWithImage
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconText="Delete"
+            app:iconImg="@drawable/cancel_icon"
+            app:iconTint="@color/red"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/downloaded"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/cloud_down_icon"
+        android:tint="@color/purple"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="6dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

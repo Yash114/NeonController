@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="start"
+        android:orientation="vertical"
+        android:paddingStart="4dp">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:text="Play Tutorial"
+            android:textColor="@color/primary"
+            android:fontFamily="@font/oswald_medium"
+            android:layout_gravity="center"
+            />
+
+        <com.gingertech.starbeam.helpers.controllers.TextWithImage
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconText="1. Put devices on the same WiFi"
+            app:iconTint="@color/primary"
+            app:iconImg="@drawable/connect"
+            android:paddingVertical="4dp"/>
+
+        <com.gingertech.starbeam.helpers.controllers.TextWithImage
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconText="2. Download Sunshine"
+            app:iconTint="@color/primary"
+            app:iconImg="@drawable/download_icon"
+            android:paddingVertical="4dp"/>
+
+        <com.gingertech.starbeam.helpers.controllers.TextWithImage
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconText="3. Create Sunshine Login"
+            app:iconTint="@color/primary"
+            app:iconImg="@drawable/password_icon"
+            android:paddingVertical="4dp"/>
+
+        <com.gingertech.starbeam.helpers.controllers.TextWithImage
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconText="4. Enter Pin on PC"
+            app:iconTint="@color/primary"
+            app:iconImg="@drawable/pin_icon"
+            android:paddingVertical="4dp"/>
+
+        <com.gingertech.starbeam.helpers.controllers.TextWithImage
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconText="5. Play Your Games"
+            app:iconTint="@color/primary"
+            app:iconImg="@drawable/game_icon"
+            android:paddingVertical="4dp"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <include
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintDimensionRatio="H,16:9"
+            layout="@layout/tutorial_video_view"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

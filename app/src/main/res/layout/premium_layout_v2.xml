@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingVertical="72dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:paddingHorizontal="32dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/productOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.gingertech.starbeam.helpers.controllers.PremiumCardController
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:Image="@drawable/shine_icon"
+                app:ItemID="premium_one_time"
+                android:visibility="visible"/>
+
+            <com.gingertech.starbeam.helpers.controllers.PremiumCardController
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:Image="@drawable/baseline_all_inclusive_24"
+                app:ItemID="infinite_buttons"/>
+
+
+            <com.gingertech.starbeam.helpers.controllers.PremiumCardController
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:Image="@drawable/pencil_icon"
+                app:ItemID="command_editor"/>
+
+            <com.gingertech.starbeam.helpers.controllers.PremiumCardController
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:Image="@drawable/save_icon"
+                app:ItemID="unlimited_saves"/>
+
+            <com.gingertech.starbeam.helpers.controllers.PremiumCardController
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:Image="@drawable/baseline_screen_rotation_24"
+                app:ItemID="motion_controls"/>
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Play Like a Pro!"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center"
+
+        android:fontFamily="@font/oswald_medium"
+        android:textColor="@color/primary"
+        android:textSize="16sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

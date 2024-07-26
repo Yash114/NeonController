@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TabController">
+        <attr name="text" format="string" />
+        <attr name="icon_img" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="TabViewController">
+        <attr name="tabText" format="string" />
+        <attr name="selected" format="boolean" />
+        <attr name="index" format="integer" />
+
+    </declare-styleable>
+
+    <declare-styleable name="TabViewController_create">
+        <attr name="tabText_create" format="string" />
+        <attr name="tabText_description" format="string" />
+
+    </declare-styleable>
+
+    <declare-styleable name="LayoutPreviewTabController">
+        <attr name="add_new" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TextWithImage">
+        <attr name="iconText" format="string" />
+        <attr name="iconImg" format="reference" />
+        <attr name="iconTint" format="color" />
+
+    </declare-styleable>
+
+    <declare-styleable name="mCheckBox">
+        <attr name="checkboxCheckable" format="boolean"/>
+        <attr name="checkboxChecked" format="boolean"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="CheckmarkedTextView">
+        <attr name="textVal" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="ListViewController">
+        <attr name="editable" format="boolean"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="PremiumSelection">
+        <attr name="Price" format="string"/>
+        <attr name="Discount" format="string"/>
+        <attr name="OfferID" format="string"/>
+        <attr name="bestDeal" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="PremiumCardController">
+        <attr name="ItemID" format="string"/>
+        <attr name="Purchased" format="boolean"/>
+        <attr name="Title" format="string"/>
+        <attr name="Content" format="string"/>
+        <attr name="Image" format="reference"/>
+
+    </declare-styleable>
+
+
+</resources>

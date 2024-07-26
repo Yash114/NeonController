@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#aa000000"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/stroke_rounded_rect_white"
+        android:layout_marginVertical="32dp">
+
+        <ImageView
+            android:id="@+id/exitImageButton"
+            android:layout_margin="8dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:src="@drawable/close"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/applyImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="APPLY"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+
+            android:fontFamily="@font/oswald_medium"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:fontFamily="@font/dm_mono"
+            android:layout_marginBottom="32dp"
+            android:text="Click on the button in the middle to choose a new button image. When you are happy with your selected image click on the APPLY button. If you want to go back the default image click on the reset button." />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/ic_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/textView2"
+            android:background="@drawable/basic_black_border"
+            android:padding="16dp"/>
+
+
+        <TextView
+            android:id="@+id/resetImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="RESET"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="16dp"
+
+            android:fontFamily="@font/oswald_medium"
+            android:textSize="18sp"
+            android:textColor="@color/red"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

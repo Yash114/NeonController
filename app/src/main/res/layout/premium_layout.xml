@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/main"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/subscribeButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginHorizontal="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:layout_marginTop="96dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:paddingHorizontal="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="36dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/check_icon"
+                    app:tint="@color/gold"
+                    android:padding="2dp"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/black"
+                    android:layout_marginRight="8dp"/>
+
+                <LinearLayout
+                    android:layout_weight="@integer/material_motion_duration_long_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Infinite Buttons"
+                        android:fontFamily="@font/oswald_medium"
+                        android:textColor="@color/primary"
+                        android:textSize="24sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="- Gives infinite number of buttons per overlay"
+                        android:fontFamily="@font/oswald_medium"
+                        android:textColor="@color/primary"
+                        android:textSize="10sp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="6dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/check_icon"
+                    app:tint="@color/black"
+                    android:padding="2dp"
+                    android:background="@drawable/circle"
+                    android:backgroundTint="@color/primary"
+                    android:layout_marginRight="8dp"/>
+
+                <LinearLayout
+                    android:layout_weight="@integer/material_motion_duration_long_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Motion Controls"
+                        android:fontFamily="@font/oswald_medium"
+                        android:textColor="@color/primary"
+                        android:textSize="24sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="- Use gyroscopic controls with your layouts"
+                        android:fontFamily="@font/oswald_medium"
+                        android:textColor="@color/primary"
+                        android:textSize="10sp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:paddingHorizontal="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="36dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/check_icon"
+                app:tint="@color/gold"
+                android:padding="2dp"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/black"
+                android:layout_marginRight="8dp"/>
+
+            <LinearLayout
+                android:layout_weight="@integer/material_motion_duration_long_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Infinite Layouts"
+                    android:fontFamily="@font/oswald_medium"
+                    android:textColor="@color/primary"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- Create an unlimited number of layouts for your games!"
+                    android:fontFamily="@font/oswald_medium"
+                    android:textColor="@color/primary"
+                    android:textSize="10sp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="6dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/check_icon"
+                app:tint="@color/gold"
+                android:padding="2dp"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/black"
+                android:layout_marginRight="8dp"/>
+
+            <LinearLayout
+                android:layout_weight="@integer/material_motion_duration_long_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Command Editor"
+                    android:fontFamily="@font/oswald_medium"
+                    android:textColor="@color/primary"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- Customize button behavior with code!"
+                    android:fontFamily="@font/oswald_medium"
+                    android:textColor="@color/primary"
+                    android:textSize="10sp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/subscribeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUBSCRIBE"
+        android:textSize="24sp"
+        android:fontFamily="@font/oswald_medium"
+        android:textColor="@color/white"
+
+        app:layout_constraintTop_toBottomOf="@id/main"
+        app:layout_constraintBottom_toTopOf="@id/slogan"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="64dp"
+        android:background="@drawable/golden_subscribe"/>
+
+    <LinearLayout
+        android:id="@+id/slogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="8dp"
+        android:paddingTop="2dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/underButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dm_mono"
+            android:textColor="@color/primary"
+            android:textSize="8sp"
+            android:alpha="0.5"
+            android:text="$59.99 per month, cancel anytime."
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dm_mono"
+            android:textColor="@color/primary"
+            android:textSize="8sp"
+            android:alpha="0.5"
+            android:text="Game without limits!"
+            />
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

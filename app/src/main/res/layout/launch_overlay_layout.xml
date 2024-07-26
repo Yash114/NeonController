@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/splitLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:alpha="0"
+            android:id="@+id/leftSide"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_border"
+            android:gravity="center"
+            android:text="MOUSE AREA"
+            android:textColor="@color/primary"
+            android:textSize="48sp"
+            android:fontFamily="@font/oswald_medium"/>
+
+        <TextView
+            android:alpha="0"
+            android:id="@+id/rightSide"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_border"
+            android:gravity="center"
+            android:text="MOUSE AREA"
+            android:textColor="@color/primary"
+            android:textSize="48sp"
+            android:fontFamily="@font/oswald_medium"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:alpha="0"
+        android:id="@+id/fullSide"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_border"
+        android:gravity="center"
+        android:text="MOUSE AREA"
+        android:textColor="@color/primary"
+        android:textSize="48sp"
+        android:fontFamily="@font/oswald_medium"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

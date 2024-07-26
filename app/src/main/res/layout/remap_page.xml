@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.gingertech.starbeam.helpers.controllers.RemapListController
+        android:id="@+id/remapListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="64dp"
+        android:layout_marginHorizontal="16dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+    <com.gingertech.starbeam.helpers.controllers.TextWithImage
+        android:id="@+id/saveRemap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:iconText="Save"
+        app:iconTint="@color/secondary"
+        app:iconImg="@drawable/save_icon"
+        android:layout_gravity="bottom" />
+
+    <com.gingertech.starbeam.helpers.controllers.TextWithImage
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:iconText="Reset"
+        app:iconTint="@color/primary"
+        app:iconImg="@drawable/reset_icon"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

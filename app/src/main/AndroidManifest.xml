@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="com.android.providers.tv.permission.WRITE_EPG_DATA"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+<!--    <uses-permission android:name="android.permission.BLUETOOTH"/>-->
+<!--    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>-->
+<!--    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"-->
+<!--        android:usesPermissionFlags="neverForLocation"/>-->
+<!--    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>-->
+
+
+
+
+
+
+    <uses-feature android:glEsVersion="0x00030000" android:required="true" />
+    <uses-feature android:name="android.hardware.type.pc" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.hardware.audio.output" android:required="false" />
+    <uses-feature android:name="android.hardware.gamepad" android:required="false" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <supports-gl-texture android:name="GL_OES_compressed_paletted_texture" />
+
+
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+
+    <application
+        android:hardwareAccelerated="true"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:dataExtractionRules="@xml/backup_rules_s"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:icon="@mipmap/logo_image"
+        android:label="Neon Controller"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:gwpAsanMode="always"
+        android:localeConfig="@xml/locales_config"
+        android:enableOnBackInvokedCallback="false"
+        tools:targetApi="31">
+
+        <profileable android:shell="true" android:enabled="false" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo2" />
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/primary" />
+
+        <activity
+            android:hardwareAccelerated="true"
+            android:name=".MainActivity"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape"
+            android:resizeableActivity="true"
+            android:theme="@style/StreamTheme"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:enabled="true"
+            android:exported="true"
+            android:name=".LaunchActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="landscape"
+            android:resizeableActivity="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".limelight.preferences.AddComputerManually"
+            android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+            android:label="Add Computer Manually"
+            android:resizeableActivity="true"
+            android:windowSoftInputMode="stateVisible">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gingertech.starbeam.limelight.PcView" />
+        </activity>
+
+        <activity
+            android:name=".ui.ManualComputerJoin_Neon"
+            android:screenOrientation="landscape"
+            android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+            android:label="Add Computer Manually"
+            android:resizeableActivity="true"
+            android:windowSoftInputMode="stateVisible">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gingertech.starbeam.limelight.PcView" />
+        </activity>
+
+
+        <!--        <activity-->
+<!--            android:name=".limelight.PcView"-->
+<!--            android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"-->
+<!--            android:exported="true"-->
+<!--            android:resizeableActivity="true">-->
+
+<!--        </activity>-->
+
+        <service
+            android:name=".limelight.discovery.DiscoveryService"
+            android:label="mDNS PC Auto-Discovery Service" />
+        <service
+            android:name=".limelight.computers.ComputerManagerService"
+            android:label="Computer Management Service" />
+        <service
+            android:name=".limelight.binding.input.driver.UsbDriverService"
+            android:label="Usb Driver Service" />
+
+<!--        <activity-->
+<!--            android:name=".limelight.HelpActivity"-->
+<!--            android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"-->
+<!--            android:resizeableActivity="true">-->
+<!--            <meta-data-->
+<!--                android:name="android.support.PARENT_ACTIVITY"-->
+<!--                android:value="com.gingertech.starbeam.limelight.PcView" />-->
+<!---->
+<!--        </activity>-->
+
+        <activity
+            android:name=".limelight.AppView"
+            android:resizeableActivity="true"
+            android:configChanges="mcc|mnc|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gingertech.starbeam.limelight.AppView" />
+        </activity>
+
+        <activity
+            android:name=".limelight.preferences.StreamSettings"
+            android:screenOrientation="landscape"
+            android:noHistory="true"
+            android:resizeableActivity="true"
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:theme="@style/StreamTheme"
+            android:preferMinimalPostProcessing="true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".limelight.AppView" />
+
+            <!-- Special metadata for NVIDIA Shield devices to prevent input buffering
+                 and most importantly, opt out of mouse acceleration while streaming -->
+            <meta-data
+                android:name="com.nvidia.immediateInput"
+                android:value="true" />
+            <meta-data
+                android:name="com.nvidia.rawCursorInput"
+                android:value="true" />
+        </activity>
+
+        <service
+            android:exported="true"
+            android:name=".helpers.controllers.keyboardController"
+            android:label="NEON"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@layout/method"/>
+        </service>
+
+    </application>
+
+</manifest>

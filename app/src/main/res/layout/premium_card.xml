@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="144dp"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_border"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="8dp"
+    android:id="@+id/backgroundView">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:src="@drawable/baseline_all_inclusive_24"
+        android:tint="@color/primary"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Infinite Buttons"
+        android:fontFamily="@font/oswald_medium"
+        android:textSize="16sp"
+        android:textColor="@color/primary"/>
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- Gives infinite number of buttons to use in your controllers"
+        android:fontFamily="@font/dm_mono"
+        android:textSize="8sp"
+        android:textColor="@color/primary"
+        android:layout_marginTop="4dp"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/purchase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="US$5.99"
+        android:fontFamily="@font/oswald_medium"
+        android:textColor="@color/white"
+        android:background="@drawable/golden_subscribe"
+        android:paddingVertical="2dp"
+        android:paddingHorizontal="8dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/alreadyHave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Already have"
+        android:fontFamily="@font/oswald_medium"
+        android:textColor="@color/primary"
+        android:background="@drawable/rounded_border"
+        android:paddingVertical="2dp"
+        android:paddingHorizontal="8dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        />
+
+</LinearLayout>

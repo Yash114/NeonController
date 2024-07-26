@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#aa000000">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <com.gingertech.starbeam.helpers.controllers.BackgroundParticles
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="32dp"
+            android:paddingBottom="32dp">
+
+            <LinearLayout
+                android:id="@+id/textGroup"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingHorizontal="32dp">
+
+                <TextView
+                    android:id="@+id/titleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome to Neon!"
+                    android:textColor="@color/primary"
+                    android:fontFamily="@font/oswald_medium"
+                    android:textSize="36dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="16dp"
+                    />
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="2dp"
+                    android:background="@color/secondary"
+                    android:layout_marginBottom="16dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="36dp"
+                    android:text="Play PC Games\nin 3 easy steps!"
+                    android:textColor="@color/primary"
+                    android:fontFamily="@font/oswald_medium"
+                    android:gravity="center"
+                    android:id="@+id/subTitleText"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/onboarding_1"
+                app:tint="@color/primary"
+                android:tintMode="multiply"
+                android:id="@+id/imageView"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/linearLayout"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="36dp"
+                android:src="@drawable/baseline_play_arrow_24"
+                app:tint="@color/primary"
+                android:rotation="180"
+                android:id="@+id/back"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/circle"
+                app:tint="@color/secondary"
+                android:padding="8dp"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/circle"
+                app:tint="@color/primary"
+                android:padding="8dp"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/circle"
+                app:tint="@color/primary"
+                android:padding="8dp"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/circle"
+                app:tint="@color/primary"
+                android:padding="8dp"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/circle"
+                app:tint="@color/primary"
+                android:padding="8dp"/>
+
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="36dp"
+                android:src="@drawable/baseline_play_arrow_24"
+                app:tint="@color/primary"
+                android:id="@+id/forward"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

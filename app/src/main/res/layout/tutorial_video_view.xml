@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/youtube_web_view"
+        android:layout_margin="16dp"/>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/closeButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/close"
+        android:background="@drawable/circle"
+        app:tint="@color/red"
+        android:padding="4dp"
+        android:layout_margin="8dp"/>
+
+    <ImageView
+        android:id="@+id/moveButton"
+        android:visibility="gone"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/move_icon"
+        android:background="@drawable/circle"
+        app:tint="@color/black"
+        android:padding="4dp"
+        android:layout_margin="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="true"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

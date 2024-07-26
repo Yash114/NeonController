@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88000000"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="128dp"
+        android:layout_marginVertical="64dp"
+        android:background="@drawable/basic_white_border"
+        android:paddingVertical="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/oswald_medium"
+                    android:lines="1"
+                    android:paddingTop="8dp"
+                    android:text="@string/button_details"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/title_size" />
+
+                <EditText
+                    android:id="@+id/setKeyBindEdit"
+                    style="@style/Platform.MaterialComponents.Light"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/basic_black_border"
+                    android:fontFamily="@font/oswald_medium"
+                    android:hint="@string/set_keybind"
+                    android:imeOptions="actionDone"
+                    android:padding="8dp"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="Valid Keybind?" />
+
+                    <com.gingertech.starbeam.helpers.controllers.mCheckBox
+                        android:id="@+id/validID"
+                        android:layout_width="16dp"
+                        android:layout_height="wrap_content"
+                        android:checkable="false" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/Description_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/oswald_medium"
+                    android:text="@string/description_normal_button"
+                    android:textAlignment="center"
+                    android:textSize="32dp" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/oswald_medium"
+                    android:text="hfuiehfibdsu fd fishf uidfhuidshfbiuds \nhfuidsfhdsui fgdsiu fdsuif dsuifdsifuids fggusdifdsiufuds fbuidsfi"
+                    android:textAlignment="textStart" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/oswald_medium"
+                    android:text="@string/available_modifiers"
+                    android:textAlignment="center"
+                    android:textSize="32dp" />
+
+                <TextView
+                    android:id="@+id/modifier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/oswald_medium"
+                    android:text="hfuiehfibdsu fd fishf uidfhuidshfbiuds \nhfuidsfhdsui fgdsiu fdsuif dsuifdsifuids fggusdifdsiufuds fbuidsfi"
+                    android:textAlignment="textStart" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/exitButtonSettings"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="16dp"
+                android:background="@null"
+                android:src="@drawable/close"
+                android:tint="#000000" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/trashButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="16dp"
+                android:background="@null"
+                android:src="@drawable/baseline_delete_24"
+                android:tint="#ff0000" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

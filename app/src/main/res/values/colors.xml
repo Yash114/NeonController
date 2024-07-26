@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="paint_click">#cc5333</color>
+    <color name="paint_normal_">#06beb6</color>
+    <color name="paint_sticky">#7F70FF</color>
+    <color name="paint_cycle">#7F00FF</color>
+    <color name="paint_joy">#339933</color>
+    <color name="paint_scroll">#997733</color>
+
+    <color name="ocean_click">#000046</color>
+    <color name="ocean_normal_">#1CB5E0</color>
+    <color name="ocean_sticky">#1CB5a0</color>
+    <color name="ocean_cycle">#1080E0</color>
+    <color name="ocean_joy">#006080</color>
+    <color name="ocean_scroll">#336080</color>
+
+
+    <color name="snow_click">#333333</color>
+    <color name="snow_normal_">#ffffff</color>
+    <color name="snow_sticky">#ffffff</color>
+    <color name="snow_cycle">#ffffff</color>
+    <color name="snow_joy">#ffffff</color>
+    <color name="snow_scroll">#ffffff</color>
+
+
+    <color name="fire_click">#440000</color>
+    <color name="fire_normal_">#FF2200</color>
+    <color name="fire_sticky">#cc0022</color>
+    <color name="fire_cycle">#882200</color>
+    <color name="fire_joy">#880000</color>
+    <color name="fire_scroll">#880022</color>
+
+
+    <color name="cloud_click">#111121</color>
+    <color name="cloud_normal_">#888888</color>
+    <color name="cloud_sticky">#888888</color>
+    <color name="cloud_cycle">#888888</color>
+    <color name="cloud_joy">#888888</color>
+    <color name="cloud_scroll">#888888</color>
+
+
+    <color name="gold_click">#353221</color>
+    <color name="gold_normal_">#FCF655</color>
+    <color name="gold_sticky">#FCF622</color>
+    <color name="gold_cycle">#FCF658</color>
+    <color name="gold_joy">#FCF658</color>
+    <color name="gold_scroll">#FCF658</color>
+
+    <color name="swamp_click">#113521</color>
+    <color name="swamp_normal_">#22FF22</color>
+    <color name="swamp_sticky">#448833</color>
+    <color name="swamp_cycle">#886655</color>
+    <color name="swamp_joy">#99eeaa</color>
+    <color name="swamp_scroll">#99ccaa</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#777777</color>
+
+    <color name="yellow">#FFFF00</color>
+    <color name="blue">#0077FF</color>
+    <color name="green">#55AA00</color>
+
+    <color name="premium_yellow">#FADA5E</color>
+    <color name="orange">#FAbA00</color>
+
+
+    <color name="primary">#F0E9D2</color>
+    <color name="primaryDarker">#C0BAA8</color>
+
+    <color name="primary2">#E6DDC4</color>
+    <color name="secondary">#55AA00</color>
+    <color name="dark_secondary">#356D00</color>
+    <color name="light_secondary">#D2FFA8</color>
+
+    <color name="backcolor">#080D21</color>
+    <color name="red">#FF0000</color>
+    <color name="gold">#FFDB5C</color>
+    <color name="purple">#9E00FF</color>
+
+
+
+
+</resources>

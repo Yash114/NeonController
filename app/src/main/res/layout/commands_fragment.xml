@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="top"
+        android:layout_marginVertical="64dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/commandList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+    
+    <com.gingertech.starbeam.helpers.controllers.TextWithImage
+        android:id="@+id/addCommandButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:iconText="New Command"
+        app:iconImg="@drawable/plus_icon"
+        app:iconTint="@color/primary"
+        android:background="@drawable/basic_bordered_background"
+        android:backgroundTint="@color/secondary"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="8dp"
+        />
+
+    <com.gingertech.starbeam.helpers.controllers.NewCommandController
+        android:visibility="gone"
+        android:id="@+id/newCommandPopup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <include
+        android:id="@+id/deleteCommandPopup"
+        layout="@layout/delete_command_popup"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

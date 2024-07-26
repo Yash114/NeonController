@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:focusable="true"
+    android:clickable="true">
+
+
+    <com.gingertech.starbeam.helpers.controllers.BackgroundParticles
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
+
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/navBar">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/logoView"
+                    android:layout_marginStart="16dp"
+                    android:layout_width="64dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo2"
+                    android:tint="@color/primary"
+                    android:tintMode="multiply"
+                    android:elevation="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/mainTitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary"
+                        android:text="Controller List"
+                        android:textSize="32sp"
+                        android:fontFamily="@font/oswald_medium"
+                        android:paddingLeft="4dp"
+                        android:textAlignment="textStart"
+                        android:elevation="16dp"
+                        android:maxLength="16"
+                        android:lineSpacingMultiplier="0" />
+
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="4dp"
+                        android:id="@+id/logoView1"
+                        android:translationY="-10dp">
+
+                        <ImageView
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:src="@drawable/shine_icon"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="4dp"
+                            app:tint="@color/gold"
+                            android:elevation="16dp"/>
+
+                        <TextView
+                            android:visibility="visible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Premium"
+                            android:fontFamily="@font/oswald_medium"
+                            android:textColor="@color/gold"
+                            android:elevation="16dp"
+                            android:lineSpacingMultiplier="0"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="visible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="4dp"
+                        android:id="@+id/logoView2"
+                        android:translationY="-10dp">
+
+                        <ImageView
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:src="@drawable/basic"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="4dp"
+                            app:tint="@color/purple"
+                            android:elevation="16dp"/>
+
+                        <TextView
+                            android:visibility="visible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Basic"
+                            android:fontFamily="@font/oswald_medium"
+                            android:textColor="@color/purple"
+                            android:elevation="16dp"
+                            android:lineSpacingMultiplier="0"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/drawerToggle"
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/burger_navigator"
+                    android:layout_gravity="top"
+                    app:tint="@color/primary"
+                    android:layout_marginTop="16dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+
+            <com.gingertech.starbeam.helpers.controllers.TextWithImage
+                android:id="@+id/helpButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:iconImg="@drawable/help_icon"
+                app:iconText="Help"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_margin="8dp"
+                app:tint="@color/primary" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.gingertech.starbeam.helpers.controllers.DrawerController
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.gingertech.starbeam.helpers.controllers.HelpController
+        android:id="@+id/helpLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <include
+        android:visibility="gone"
+        android:id="@+id/commandPopup"
+        layout="@layout/commands_popup"/>
+
+    <include
+        android:visibility="gone"
+        android:id="@+id/reviewPopup"
+        layout="@layout/review_popup"/>
+
+<!--    <com.gingertech.starbeam.helpers.controllers.OnboardingTutorialController-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:visibility="gone"-->
+<!--        android:id="@+id/onbardingTutorial"/>-->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

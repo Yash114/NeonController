@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:id="@+id/container_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scrollbarStyle="insideOverlay"
+        android:background="@drawable/stroke_rounded_rect_white"
+        android:scrollbarThumbVertical="@color/black"
+        android:verticalScrollbarPosition="left"
+        android:layout_marginTop="72dp"
+        android:layout_marginBottom="48dp"
+        android:fadeScrollbars="false"
+        android:paddingVertical="8dp"
+        android:paddingStart="6dp"
+        >
+
+    <LinearLayout
+        android:layout_height="100dp"
+        android:layout_width="200dp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:paddingVertical="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Add Button"
+            android:fontFamily="@font/oswald_medium"
+            android:textAlignment="center"
+            android:textColor="@color/secondary"
+            android:textSize="24sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/buttonList">
+
+        <com.gingertech.starbeam.helpers.controllers.TabViewController_create
+            android:id="@+id/normalButtonButton"
+            app:tabText_create="@string/normal"
+            app:tabText_description="@string/basic_button_object"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.gingertech.starbeam.helpers.controllers.TabViewController_create
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:tabText_create="@string/sticky"
+            app:tabText_description="@string/click_once_to_hold_click_again_to_release" />
+
+        <com.gingertech.starbeam.helpers.controllers.TabViewController_create
+            app:tabText_create="@string/cycle"
+            app:tabText_description="@string/click_to_cycle_through_a_list_of_keybinds"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.gingertech.starbeam.helpers.controllers.TabViewController_create
+            app:tabText_create="@string/joy"
+            app:tabText_description="@string/joystick_action_button"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <com.gingertech.starbeam.helpers.controllers.TabViewController_create
+            app:tabText_create="@string/scroll"
+            app:tabText_description="@string/scroll_through_a_list_of_keybinds"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+<!--        <com.gingertech.starbeam.helpers.controllers.TabViewController_create-->
+<!--            app:tabText_create="Muli-Button"-->
+<!--            app:tabText_description="Multiple Buttons in one"-->
+
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+
+<!--        <com.gingertech.starbeam.helpers.controllers.TabViewController_create-->
+<!--            app:tabText_create="Gyro Button"-->
+<!--            app:tabText_description="Gyro Activate Button"-->
+
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
